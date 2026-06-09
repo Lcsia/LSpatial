@@ -1428,6 +1428,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3801480670748779069}
   - component: {fileID: 9010755025085813314}
+  - component: {fileID: 1954043100305158603}
   m_Layer: 0
   m_Name: LCSIA_Player
   m_TagString: Untagged
@@ -1466,6 +1467,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   avatarPlayer: {fileID: 8404742639119867653}
   vrPlayer: {fileID: 7157541441667066128}
+--- !u!114 &1954043100305158603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5037858577743564696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abbf16c582433ef4c954530e705ca247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHand: {fileID: 6121124457629487129}
+  rightHand: {fileID: 2080855587988490557}
+  head: {fileID: 6344490120765644248}
+  leftPosition: {x: 0, y: 0, z: 0}
+  leftRotation: {x: 0, y: 0, z: 0}
+  rightPosition: {x: 0, y: 0, z: 0}
+  rightRotation: {x: 0, y: 0, z: 0}
+  headPosition: {x: 0, y: 0, z: 0}
+  headRotation: {x: 0, y: 0, z: 0}
+  vrDetected: 0
 --- !u!1 &5217885080050012214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2745,7 +2768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8163496541876125939
 Transform:
   m_ObjectHideFlags: 0

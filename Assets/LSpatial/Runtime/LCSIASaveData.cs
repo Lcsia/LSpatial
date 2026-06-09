@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
+using System.IO;
 
 public class LCSIASaveData : MonoBehaviour
 {
@@ -30,14 +31,16 @@ public class LCSIASaveData : MonoBehaviour
                 999999);
     }
 
-    public void Send(
-        string data)
-    {
-        StartCoroutine(
-            SendCoroutine(
-                data));
-    }
+	public void Send(
+		string data)
+	{
+		SaveLocalCopy(
+			data);
 
+		StartCoroutine(
+			SendCoroutine(
+				data));
+	}
     private IEnumerator SendCoroutine(
         string data)
     {
@@ -103,4 +106,28 @@ public class LCSIASaveData : MonoBehaviour
                 request.error);
         }
     }
+	
+	private void SaveLocalCopy(
+    string data)
+	{
+		string fileName =
+			sessionID +
+			".csv";
+
+		string path =
+			Path.Combine(
+				Application.persistentDataPath,
+				fileName);
+
+		File.WriteAllText(
+			path,
+			data);
+
+		if (debug)
+		{
+			Debug.Log(
+				"Local copy saved: " +
+				path);
+		}
+	}
 }

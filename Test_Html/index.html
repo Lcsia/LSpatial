@@ -3,9 +3,43 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | OCE_Html</title>
+    <title>Unity WebGL Player | C TopoTask</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+	
+	<style>
+.unity-blue-button {
+    float: right;
+    width: 120px;
+    height: 38px;
+
+    background-color: #33A9D6;
+    color: white;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    user-select: none;
+
+    margin-right: 6px;
+
+    transition: background-color 0.15s;
+}
+
+.unity-blue-button:hover {
+    background-color: #4BB8E0;
+}
+
+.unity-blue-button:active {
+    background-color: #2795BE;
+}
+</style>
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -17,11 +51,23 @@
         </div>
       </div>
       <div id="unity-warning"> </div>
-      <div id="unity-footer">
-        <div id="unity-webgl-logo"></div>
-        <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">OCE_Html</div>
-      </div>
+<div id="unity-footer">
+
+    <div id="unity-fullscreen-button"></div>
+
+    <a href="https://lcsia.com.mx/VR/DownDataVR.html"
+       target="_blank"
+       class="unity-blue-button">
+       DATA
+    </a>
+
+    <a href="https://lcsia.com.mx/LSpatial/CTT/C Topos Task.apk"
+       target="_blank"
+       class="unity-blue-button">
+       VR APK
+    </a>
+
+</div>
     </div>
     <script>
 
@@ -64,7 +110,7 @@
         codeUrl: buildUrl + "/Test_Html.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "LCSIA",
-        productName: "OCE_Html",
+        productName: "C TopoTask",
         productVersion: "0.1.0",
         showBanner: unityShowBanner,
       };
